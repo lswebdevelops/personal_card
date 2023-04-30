@@ -1,0 +1,39 @@
+.content{
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    border: solid 1px gray;
+    border-radius: 5%;
+    width: 80%;
+    max-width: 500px;
+}
+.card-image{
+    width: 80%;
+    max-width: 350px;;
+}
+.card-name{
+    text-align: left;
+    padding: 0;
+    padding-left: 35px;
+    margin: 0;
+    font-size: 35px;
+    }
+.card-contact{
+    color: gray;
+    text-align: left;
+    padding-left: 35px;
+}
+
+.card-favorite{
+    display: block;    
+    width: 35px;
+    text-align: left;
+    padding-left: 35px;
+ }
+ .card-info{
+    margin-bottom: 45px;
+ }
