@@ -10,19 +10,13 @@ function Content(){
         isFavorite: false
     });
 
-    // it could be: 
-    // let starIcon = contact.isFavorite ? "yellowStar.png" : "star.png"
-    // then down below, update the line :
-    //from:  <img src={starIcon ? require(`../Images/star.png`): require(`../Images/yellowStar.
-    //to: <img src={`../images/${starIcon`}
-    // *** see down commentary:
-    let starIcon = contact.isFavorite;
+    let starIcon = contact.isFavorite ? 'yellowStar.png': 'star.png'
     function toggleFavorite(){
-     setContact(previousState =>({
-        // bring all the properties using the spread operator: "..." otherwise it would just bring the isFavorite value
-        ...previousState,
-        isFavorite: !previousState.isFavorite
-     }))
+        setContact(prevStatus =>({
+                ...prevStatus,
+            isFavorite: !prevStatus.isFavorite
+            
+        }))
     }
 
 
@@ -34,11 +28,12 @@ function Content(){
                 alt='a man'/>
                 <div className='card-info'>
                 {/* *** here commentary */}
-                <img src={starIcon ? require(`../Images/yellowStar.png`): require(`../Images/star.png`)} 
-
+                <img
+                src={require(`../Images/${starIcon}`)}
                 alt='a star'
                 className='card-favorite'
-                onClick={toggleFavorite} />
+                onClick={toggleFavorite}
+                />
                 <h2 className='card-name'>
                     {contact.fistName} {contact.lastName}
                 </h2>
