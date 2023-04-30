@@ -11,10 +11,13 @@ function Content(){
     });
 
 
+    let starIcon = contact.isFavorite;
     function toggleFavorite(){
-        console.log("Toggle Favorite");
+     setContact(previousState =>({
+        ...previousState,
+        isFavorite: !previousState.isFavorite
+     }))
     }
-
 
 
     return(
@@ -24,19 +27,20 @@ function Content(){
                 className='card-image'
                 alt='a man'/>
                 <div className='card-info'>
-                <img src={require(`../Images/star.png`)} 
+                <img src={starIcon ? require(`../Images/star.png`): require(`../Images/yellowStar.png`)} 
+
                 alt='a star'
                 className='card-favorite'
                 onClick={toggleFavorite} />
                 <h2 className='card-name'>
-                    John Doe
+                    {contact.fistName} {contact.lastName}
                 </h2>
-                <p className='card-contact'> +1 (719) 555-1212</p>
-                <p className='card-contact'>itsmyrealname@example.com</p>
+                <p className='card-contact'>{contact.phone}</p>
+                <p className='card-contact'> {contact.email}</p>
                 </div>
             </article>
         </main>
-            )
+        )
 }
 
 export default Content;
