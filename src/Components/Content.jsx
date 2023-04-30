@@ -12,11 +12,12 @@ function Content(){
 
     let starIcon = contact.isFavorite ? 'yellowStar.png': 'star.png'
     function toggleFavorite(){
-        setContact(prevStatus =>({
-                ...prevStatus,
-            isFavorite: !prevStatus.isFavorite
-            
-        }))
+     setContact(prevState=>{
+        return{
+            ...prevState,
+            isFavorite: !prevState.isFavorite
+        }
+     })
     }
 
 
