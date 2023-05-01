@@ -1,3 +1,6 @@
+:root{
+    --main-left-padding: 50px
+}
 .content{
     background-color: white;
     padding: 12px;
@@ -18,22 +21,31 @@
 .card-name{
     text-align: left;
     padding: 0;
-    padding-left: 35px;
+    padding-left: var(--main-left-padding);
     margin: 0;
     font-size: 35px;
     }
 .card-contact{
     color: gray;
     text-align: left;
-    padding-left: 35px;
+    padding-left: var(--main-left-padding);
 }
 
 .card-favorite{
     display: block;    
     width: 35px;
-    text-align: left;
-    padding-left: 35px;
+  
  }
  .card-info{
     margin-bottom: 45px;
  }
+ .btnStarIcon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+    border: none;
+    background-color: white;
+    padding-left: var(--main-left-padding);
+   
+    }
