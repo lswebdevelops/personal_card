@@ -10,9 +10,9 @@ function Content() {
     lastName: "Doe",
     phone: "+1 (719) 555-1212",
     email: "itsmyrealname@example.com",
-    isFavorite: true
+    isFavorite: false
   });													
-  let iconStar = contact.isFavorite ? require("../Images/star.png"): require("../Images/yellowStar.png");
+ 
 
   function toggleFavorite(){
     setContact(prevStatus =>({
@@ -28,21 +28,16 @@ function Content() {
              className='card-image'
              alt='a man'/>
         <div className='card-info'>
-			  
+		<Star        
+            isFilled={contact.isFavorite}
+            handleClick={toggleFavorite} 
+            />
 
-        <button
-            className='btnStarIcon'
-            onClick={toggleFavorite}>
-        <Star
-          isFilled={iconStar} />
-        </button >
-
-
-          <h2 className='card-name'>
+        <h2 className='card-name'>
             {contact.fistName} {contact.lastName}
-          </h2>
-          <p className='card-contact'>{contact.phone}</p>
-          <p className='card-contact'> {contact.email}</p>
+        </h2>
+        <p className='card-contact'>{contact.phone}</p>
+        <p className='card-contact'> {contact.email}</p>
         </div>
       </article>
     </main>

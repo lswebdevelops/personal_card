@@ -34,12 +34,6 @@
 .card-favorite{
     display: block;    
     width: 35px;
-  
- }
- .card-info{
-    margin-bottom: 45px;
- }
- .btnStarIcon{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -47,5 +41,8 @@
     border: none;
     background-color: white;
     padding-left: var(--main-left-padding);
-   
-    }
+  
+ }
+ .card-info{
+    margin-bottom: 45px;
+ }
